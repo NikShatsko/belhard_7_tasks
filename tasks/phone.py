@@ -17,3 +17,27 @@
 Модель: {}
 Год выпуска: {}
 """
+
+
+class Phone:
+    brand: str
+    model: str
+    issue_year: int
+    name: str
+
+    def __init__(self, brand: str, model: str, issue_year: int, name: str):
+        self.brand = brand
+        self.model = model
+        self.issue_year = issue_year
+        self.name = name
+
+    def receive_call(self):
+        print(f"Звонит {self.name}")
+
+    def __str__(self):
+        return f"Бренд: {self.brand}\nМодель: {self.model}\nГод выпуска: {self.issue_year}"
+
+
+phone_list = Phone('Samsung', 'S20', 2020, "Абонент")
+print(phone_list)
+phone_list.receive_call()
